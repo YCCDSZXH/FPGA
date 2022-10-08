@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct  4 19:28:00 2022
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : NumbLock
+Top-level Entity Name : NumbLock
+Family : Cyclone IV E
+Total logic elements : 362
+    Total combinational functions : 353
+    Dedicated logic registers : 172
+Total registers : 172
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

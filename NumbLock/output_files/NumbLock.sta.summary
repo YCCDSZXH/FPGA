@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.033
+TNS   : -459.612
+
+Type  : Slow 1200mV 85C Model Setup 'ax_debounce:inst|button_negedge'
+Slack : -0.487
+TNS   : -0.998
+
+Type  : Slow 1200mV 85C Model Setup 'ax_debounce:inst12|button_negedge'
+Slack : -0.405
+TNS   : -1.048
+
+Type  : Slow 1200mV 85C Model Setup 'ax_debounce:inst13|button_negedge'
+Slack : -0.364
+TNS   : -0.976
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ax_debounce:inst12|button_negedge'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ax_debounce:inst13|button_negedge'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ax_debounce:inst|button_negedge'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -240.920
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ax_debounce:inst12|button_negedge'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ax_debounce:inst13|button_negedge'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ax_debounce:inst|button_negedge'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.755
+TNS   : -411.963
+
+Type  : Slow 1200mV 0C Model Setup 'ax_debounce:inst|button_negedge'
+Slack : -0.379
+TNS   : -0.669
+
+Type  : Slow 1200mV 0C Model Setup 'ax_debounce:inst12|button_negedge'
+Slack : -0.267
+TNS   : -0.672
+
+Type  : Slow 1200mV 0C Model Setup 'ax_debounce:inst13|button_negedge'
+Slack : -0.227
+TNS   : -0.593
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ax_debounce:inst12|button_negedge'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ax_debounce:inst13|button_negedge'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ax_debounce:inst|button_negedge'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -240.920
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ax_debounce:inst12|button_negedge'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ax_debounce:inst13|button_negedge'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ax_debounce:inst|button_negedge'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.272
+TNS   : -110.560
+
+Type  : Fast 1200mV 0C Model Setup 'ax_debounce:inst|button_negedge'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ax_debounce:inst12|button_negedge'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ax_debounce:inst13|button_negedge'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ax_debounce:inst13|button_negedge'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ax_debounce:inst12|button_negedge'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ax_debounce:inst|button_negedge'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -173.713
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ax_debounce:inst12|button_negedge'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ax_debounce:inst13|button_negedge'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ax_debounce:inst|button_negedge'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

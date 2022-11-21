@@ -1,0 +1,21 @@
+module checker (input [6:0] A,
+                output wire [3:0] C);
+
+wire b[2:0];
+wire A_[3:0];
+xor(b[0],A[6], A[4], A[2], A[0]);
+xor(b[1],A[6], A[5], A[2], A[1]);
+xor(b[2],A[6], A[5], A[4], A[3]);
+
+
+and(A_[0],b[0],b[1],b[2]);
+and(A_[1],~b[0],b[1],b[2]);
+and(A_[2],b[0],~b[1],b[2]);
+and(A_[3],b[0],b[1],~b[2]);
+
+xor(C[0],A_[0],A[6]);
+xor(C[1],A_[1],A[5]);
+xor(C[2],A_[2],A[4]);
+xor(C[3],A_[3],A[2]);
+
+endmodule

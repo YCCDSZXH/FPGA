@@ -1,0 +1,99 @@
+|MyHamming
+A4 <= XOR3:inst6.OUT
+clk => counter:inst.in
+A2 <= XOR3:inst4.OUT
+A1 <= XOR3:inst5.OUT
+B[0] <= out[0].DB_MAX_OUTPUT_PORT_TYPE
+B[1] <= out[1].DB_MAX_OUTPUT_PORT_TYPE
+B[2] <= out[2].DB_MAX_OUTPUT_PORT_TYPE
+B[3] <= out[3].DB_MAX_OUTPUT_PORT_TYPE
+datawithharm[0] <= tranform_data[0].DB_MAX_OUTPUT_PORT_TYPE
+datawithharm[1] <= tranform_data[1].DB_MAX_OUTPUT_PORT_TYPE
+datawithharm[2] <= tranform_data[2].DB_MAX_OUTPUT_PORT_TYPE
+datawithharm[3] <= tranform_data[3].DB_MAX_OUTPUT_PORT_TYPE
+datawithharm[4] <= tranform_data[4].DB_MAX_OUTPUT_PORT_TYPE
+datawithharm[5] <= tranform_data[5].DB_MAX_OUTPUT_PORT_TYPE
+datawithharm[6] <= tranform_data[6].DB_MAX_OUTPUT_PORT_TYPE
+F[0] <= checker:inst8.C[0]
+F[1] <= checker:inst8.C[1]
+F[2] <= checker:inst8.C[2]
+F[3] <= checker:inst8.C[3]
+
+
+|MyHamming|XOR3:inst6
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|MyHamming|counter:inst
+in => out[0]~reg0.CLK
+in => out[1]~reg0.CLK
+in => out[2]~reg0.CLK
+in => out[3]~reg0.CLK
+rst => out[0]~reg0.ACLR
+rst => out[1]~reg0.ACLR
+rst => out[2]~reg0.ACLR
+rst => out[3]~reg0.ACLR
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rco <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MyHamming|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|MyHamming|XOR3:inst5
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|MyHamming|convertor:inst9
+data[0] => converted_harm[2].DATAIN
+data[1] => converted_harm[4].DATAIN
+data[2] => converted_harm[5].DATAIN
+data[3] => converted_harm[6].DATAIN
+A4 => converted_harm[3].DATAIN
+A2 => converted_harm[1].DATAIN
+A1 => converted_harm[0].DATAIN
+converted_harm[0] <= A1.DB_MAX_OUTPUT_PORT_TYPE
+converted_harm[1] <= A2.DB_MAX_OUTPUT_PORT_TYPE
+converted_harm[2] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+converted_harm[3] <= A4.DB_MAX_OUTPUT_PORT_TYPE
+converted_harm[4] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+converted_harm[5] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+converted_harm[6] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MyHamming|checker:inst8
+A[0] => WideXor0.IN0
+A[1] => WideXor1.IN0
+A[2] => WideXor0.IN1
+A[2] => WideXor1.IN1
+A[2] => comb.IN1
+A[3] => WideXor2.IN0
+A[4] => WideXor0.IN2
+A[4] => WideXor2.IN1
+A[4] => comb.IN1
+A[5] => WideXor1.IN2
+A[5] => WideXor2.IN2
+A[5] => comb.IN1
+A[6] => WideXor0.IN3
+A[6] => WideXor1.IN3
+A[6] => WideXor2.IN3
+A[6] => comb.IN1
+C[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

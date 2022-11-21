@@ -1,0 +1,61 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 168 144)
+	(text "XOR3" (rect 34 -1 81 19)(font "Courier New" (font_size 10)(bold)))
+	(text "inst" (rect 3 69 21 82)(font "Arial" (font_size 6)))
+	(port
+		(pt 0 56)
+		(input)
+		(text "IN3" (rect 20 52 44 68)(font "Courier New" (bold)))
+		(text "IN3" (rect 20 52 44 68)(font "Courier New" (bold)))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "IN1" (rect 20 20 44 36)(font "Courier New" (bold)))
+		(text "IN1" (rect 20 20 44 36)(font "Courier New" (bold)))
+		(line (pt 0 24)(pt 16 24))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "IN2" (rect 20 36 44 52)(font "Courier New" (bold)))
+		(text "IN2" (rect 20 36 44 52)(font "Courier New" (bold)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 104 40)
+		(output)
+		(text "OUT" (rect 61 36 85 52)(font "Courier New" (bold)))
+		(text "OUT" (rect 61 36 85 52)(font "Courier New" (bold)))
+		(line (pt 88 40)(pt 104 40))
+	)
+	(drawing
+		(line (pt 16 64)(pt 88 64))
+		(line (pt 16 16)(pt 88 16))
+		(line (pt 16 64)(pt 16 16))
+		(line (pt 88 64)(pt 88 16))
+	)
+)

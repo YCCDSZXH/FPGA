@@ -1,0 +1,55 @@
+module simple_alu (input [7:0] a,
+                   input [7:0] b,
+                   input m,
+                   input [3:0] s,
+                   output reg [7:0] t,
+                   output reg of,
+                   output reg zf);
+always @(m,s,a,b)
+begin
+    if (m == 1)
+        case (s)
+            4'b1001:
+            begin
+                t = a + b;
+                if (t > 255)
+                begin
+                    of = 1;
+                    t  = t-256;
+                end
+                else
+                    of = 0;
+                if (t == 0)
+                    zf = 1;
+                else
+                    zf = 0;
+            end
+            
+            4'b0110:
+            begin
+                t = b-a;
+                if (t < 0)
+                begin
+                    of = 1;
+                    t  = t+256;
+                end
+                else
+                    of = 0;
+                if (t == 0)
+                    zf = 1;
+                else
+                    zf = 0;
+            end
+            4'b1011: t = a & b;
+            4'b0101: t = ~b;
+            4'b1010: t = b;
+            4'b0100: t = b;
+        endcase
+    else if (m == 0 && s == 4'b1100)
+        t = a;
+        end
+    
+    
+    
+    
+    endmodule

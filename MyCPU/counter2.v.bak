@@ -1,0 +1,36 @@
+
+
+module Count_3
+//---------------------<端口声明>---------------------------------------
+(
+input                   clk                 ,
+input                   rst_n               ,
+output reg [ 3:0]       cnt
+);
+//---------------------<信号定义>---------------------------------------
+wire                    add_cnt             ;
+wire                    end_cnt             ;
+
+//----------------------------------------------------------------------
+//--   0-9计数
+//----------------------------------------------------------------------
+always @(posedge clk or negedge rst_n)begin
+    if(!rst_n)
+        cnt <= 4'd0;
+    else if(add_cnt)begin
+        if(end_cnt)
+            cnt <= 4'd0;
+        else
+            cnt <= cnt + 1'b1;
+    end
+    else
+        cnt <= cnt;
+end
+
+assign add_cnt = 1;
+assign end_cnt = add_cnt && cnt==4'd9;
+
+
+
+
+endmodule

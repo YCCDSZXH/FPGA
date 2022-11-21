@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at ins_decoder.v(19): always construct contains both blocking and non-blocking assignments File: C:/Me/WorkSpace/fpga/MyCPU/ins_decoder.v Line: 19

@@ -1,0 +1,10 @@
+1. mux3_1 8重3-1多路选择器
+2. shift  移位逻辑
+3. con_signal 控制信号产生器
+4. sm 翻转器
+5. ir 指令寄存器
+6. psw 状态寄存器
+7. pc 指令计数器
+8. reg_group 通用寄存器组
+9. LPM_RAM.bdf RAM
+10. 组合

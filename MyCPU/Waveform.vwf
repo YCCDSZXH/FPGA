@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MyCPU -c MyCPU --vector_source="C:/Me/WorkSpace/fpga/MyCPU/Waveform.vwf" --testbench_file="C:/Me/WorkSpace/fpga/MyCPU/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MyCPU -c MyCPU --vector_source="C:/Me/WorkSpace/fpga/MyCPU/Waveform.vwf" --testbench_file="C:/Me/WorkSpace/fpga/MyCPU/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Me/WorkSpace/fpga/MyCPU/simulation/qsim/" MyCPU -c MyCPU</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Me/WorkSpace/fpga/MyCPU/simulation/qsim/" MyCPU -c MyCPU</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MyCPU -c MyCPU --vector_source="C:/Users/365/Documents/FPGA/MyCPU/Waveform.vwf" --testbench_file="C:/Users/365/Documents/FPGA/MyCPU/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MyCPU -c MyCPU --vector_source="C:/Users/365/Documents/FPGA/MyCPU/Waveform.vwf" --testbench_file="C:/Users/365/Documents/FPGA/MyCPU/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/365/Documents/FPGA/MyCPU/simulation/qsim/" MyCPU -c MyCPU</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/365/Documents/FPGA/MyCPU/simulation/qsim/" MyCPU -c MyCPU</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work MyCPU.vo
 vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MyCPU_vlg_vec_tst
+vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.simple_vlg_vec_tst
 vcd file -direction MyCPU.msim.vcd
-vcd add -internal MyCPU_vlg_vec_tst/*
-vcd add -internal MyCPU_vlg_vec_tst/i1/*
+vcd add -internal simple_vlg_vec_tst/*
+vcd add -internal simple_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -20,18 +20,15 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vlog -work work MyCPU.vo
 vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MyCPU_vlg_vec_tst
+vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.simple_vlg_vec_tst
 vcd file -direction MyCPU.msim.vcd
-vcd add -internal MyCPU_vlg_vec_tst/*
-vcd add -internal MyCPU_vlg_vec_tst/i1/*
+vcd add -internal simple_vlg_vec_tst/*
+vcd add -internal simple_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -41,9 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -54,7 +48,7 @@ the Block Editor! File corruption is VERY likely to occur.
 */
 
 /*
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 

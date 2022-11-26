@@ -39,10 +39,10 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6F17C8
-set_global_assignment -name TOP_LEVEL_ENTITY simple
+set_global_assignment -name TOP_LEVEL_ENTITY MyCPU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:57:14  NOVEMBER 06, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Standard Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -55,18 +55,35 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name EDA_USER_COMPILED_SIMULATION_LIBRARY_DIRECTORY "C:/Me/WorkSpace/fpga/MyCPU/simulation/qsim" -section_id eda_simulation
+set_global_assignment -name EDA_USER_COMPILED_SIMULATION_LIBRARY_DIRECTORY "C:/Users/365/Documents/FPGA/MyCPU/simulation/qsim" -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE RAM.bdf
+set_global_assignment -name VERILOG_FILE src/ins_decode.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE reg_group.vwf
+set_global_assignment -name VERILOG_FILE src/reg_group.v
+set_global_assignment -name VERILOG_FILE src/ir.v
+set_global_assignment -name VERILOG_FILE src/psw.v
+set_global_assignment -name VERILOG_FILE src/pc.v
+set_global_assignment -name VERILOG_FILE src/sm.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE simple.vwf
+set_global_assignment -name VERILOG_FILE src/simple.v
+set_global_assignment -name VERILOG_FILE src/shift.v
+set_global_assignment -name VERILOG_FILE src/mux3_1.v
+set_global_assignment -name VERILOG_FILE src/con_signal.v
+set_global_assignment -name BDF_FILE MyCPU.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sm.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE pc.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE psw.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ir.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE shift.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE mux3_1.vwf
+set_global_assignment -name HEX_FILE ram.hex
+set_global_assignment -name QIP_FILE LPM_RAM.qip
+set_global_assignment -name MIF_FILE rw.mif
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VERILOG_FILE src/simple.v
-set_global_assignment -name VERILOG_FILE src/shift.v
-set_global_assignment -name VERILOG_FILE src/mux3_1.v
-set_global_assignment -name VERILOG_FILE src/ins_decoder.v
-set_global_assignment -name VERILOG_FILE src/con_signal.v
-set_global_assignment -name VERILOG_FILE src/alu.v
-set_global_assignment -name BDF_FILE MyCPU.bdf
-set_global_assignment -name BDF_FILE Block2.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE MyCPU.vwf

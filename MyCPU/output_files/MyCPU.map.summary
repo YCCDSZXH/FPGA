@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Nov 20 10:50:17 2022
-Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Fri Nov 25 21:42:01 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Standard Edition
 Revision Name : MyCPU
-Top-level Entity Name : simple
+Top-level Entity Name : MyCPU
 Family : Cyclone IV E
-Total logic elements : 66
-    Total combinational functions : 66
+Total logic elements : 0
+    Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 31
+Total pins : 1
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

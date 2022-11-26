@@ -1,5 +1,6 @@
-module con_signal(input mova,
-                  movb,
+module con_signal(input [7:0]ir,
+                  input mova,
+						movb,
                   movc,
                   add,
                   sub,
@@ -16,13 +17,12 @@ module con_signal(input mova,
                   out1,
                   nop,
                   halt,
-                  [7:0]ir,
                   sm,
                   output reg [1:0]reg_ra,
-                  [1:0]reg_wa,
-                  [1:0]madd,
-                  [3:0]alu_s,
-                  pc_ld,
+                  reg_wa,
+                  madd,
+                  output reg [3:0]alu_s,
+                  output reg pc_ld,
                   pc_inc,
                   reg_we,
                   ram_xl,
@@ -54,7 +54,7 @@ always@(mova,movb,movc,add,sub,and1,not1,rsr,rsl,jmp,jz,z,jc,c,in1,out1,nop,halt
         //RAM
         ram_dl <= movc||jmp||(jz&&z)||(jc&&c)||!sm;
         ram_xl <= movb;
-        //指令寄存�???
+        //指令寄存
         ir_ld <= !sm;
         //寄存器组
         reg_we      <= !(mova||movc||add||sub||and1||not1||rsl||rsr||in1)||!sm;
@@ -73,3 +73,16 @@ always@(mova,movb,movc,add,sub,and1,not1,rsr,rsl,jmp,jz,z,jc,c,in1,out1,nop,halt
         out_en <= out1;
     end
 endmodule
+
+// module con_signal(
+// 	input mova,movb,movc,add,sub,and1,not1,rsr,rsl,jmp,jz,z,jc,c,in1,out1,nop,halt,sm,
+// 	input [7:0]ir,
+// 	output [1:0]reg_ra,reg_wa,madd,
+// 	output [3:0]alu_s,
+// 	output pc_ld,pc_inc,reg_we,ram_xl,ram_dl,alu_m,shi_fbus,shi_flbus,shi_frbus,ir_ld,
+// 	output cf_en,zf_en,sm_en,in_en,out_en
+// );
+// assign
+// begin
+// 	
+// end
